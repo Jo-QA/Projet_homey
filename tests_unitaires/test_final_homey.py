@@ -12,7 +12,6 @@ class TestHomeyManager(unittest.TestCase):
     - assertIsNone, assertIsNotNone
     - assertIn, assertNotIn
     - assertRaises
-   test
     """
     
     def setUp(self):
