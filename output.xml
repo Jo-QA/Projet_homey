@@ -1,0 +1,1662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.6 on win32)" generated="2026-07-23T14:41:47.307863" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests Ihm" source="C:\Users\meuni\OneDrive\Formation QA\Projet HOMEY\tests_ihm">
+<suite id="s1-s1" name="1 Connexions-Valides" source="C:\Users\meuni\OneDrive\Formation QA\Projet HOMEY\tests_ihm\1_connexions-valides.robot">
+<test id="s1-s1-t1" name="Le Tableau De Bord Doit Etre Visible Après Une Connexion Réussie" line="10">
+<kw name="Effectuer Une Connexion Réussie" owner="commun" type="SETUP">
+<kw name="Ouvrir Le Navigateur Et Accéder A L'Application" owner="commun">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:41:47.501388" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:41:47.501229" elapsed="6.261390"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:41:53.762803" elapsed="0.273920"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:47.500897" elapsed="6.535938"/>
+</kw>
+<kw name="Accéder A La Page De Connexion" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:41:54.037627" level="INFO">Clicking element 'xpath=//a[contains(text(),'Se connecter')]'.</msg>
+<arg>${LIEN CONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:41:54.037163" elapsed="0.077172"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:54.036968" elapsed="0.077472"/>
+</kw>
+<kw name="Saisir Les Identifiants De Connexion" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:41:54.114821" elapsed="0.213278"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:41:54.328440" level="INFO">Clicking element 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:41:54.328240" elapsed="0.067169"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:41:54.395790" level="INFO">Typing text 'robot' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<arg>${utilisateur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:41:54.395550" elapsed="0.011731"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:41:54.407650" level="INFO">Clicking element 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:41:54.407431" elapsed="0.080434"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:41:54.488247" level="INFO">Typing text 'robot' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<arg>${mot_de_passe}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:41:54.488019" elapsed="0.012505"/>
+</kw>
+<arg>robot</arg>
+<arg>robot</arg>
+<status status="PASS" start="2026-07-23T14:41:54.114591" elapsed="0.386023"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Connexion" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:41:54.501103" level="INFO">Clicking button 'css=.homey_login_button'.</msg>
+<arg>${BOUTON CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:41:54.500947" elapsed="0.068058"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:54.500751" elapsed="0.068345"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:47.500697" elapsed="7.068435"/>
+</kw>
+<kw name="Vérifier Que Le Tableau De Bord Est Visible" owner="commun">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-07-23T14:41:54.569729" elapsed="1.032509"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:41:55.603644" level="INFO">Page title is 'Tableau de bord - Livraison 3'.</msg>
+<arg>${TITRE TABLEAU DE BORD}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-07-23T14:41:55.602371" elapsed="0.001325"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:54.569513" elapsed="1.034238"/>
+</kw>
+<kw name="Effectuer Une Déconnexion Réussie" owner="commun" type="TEARDOWN">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LIEN DECONNEXION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:41:55.604335" elapsed="0.007273"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:41:55.611924" level="INFO">Clicking element 'xpath=(//a[contains(text(),'Se déconnecter')])[3]'.</msg>
+<arg>${LIEN DECONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:41:55.611737" elapsed="1.367605"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${LIEN DECONNEXION}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-07-23T14:41:56.979491" elapsed="0.013667"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:55.604115" elapsed="1.389135"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:47.500138" elapsed="9.493321"/>
+</test>
+<test id="s1-s1-t2" name="Le Lien De Deconnexion Devrait Etre Visible Après Une Déconnexion Réussie" line="16">
+<kw name="Effectuer Une Connexion Réussie" owner="commun" type="SETUP">
+<kw name="Ouvrir Le Navigateur Et Accéder A L'Application" owner="commun">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:41:56.994838" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:41:56.994683" elapsed="5.679978"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:42:02.674849" elapsed="0.262125"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:56.994529" elapsed="5.942564"/>
+</kw>
+<kw name="Accéder A La Page De Connexion" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:02.937721" level="INFO">Clicking element 'xpath=//a[contains(text(),'Se connecter')]'.</msg>
+<arg>${LIEN CONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:02.937529" elapsed="0.077266"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:02.937266" elapsed="0.077621"/>
+</kw>
+<kw name="Saisir Les Identifiants De Connexion" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:03.015211" elapsed="0.212268"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:03.227807" level="INFO">Clicking element 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:03.227612" elapsed="0.062952"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:03.290965" level="INFO">Typing text 'robot' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<arg>${utilisateur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:03.290734" elapsed="0.012473"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:03.303585" level="INFO">Clicking element 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:03.303363" elapsed="0.079075"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:03.382811" level="INFO">Typing text 'robot' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<arg>${mot_de_passe}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:03.382581" elapsed="0.010571"/>
+</kw>
+<arg>robot</arg>
+<arg>robot</arg>
+<status status="PASS" start="2026-07-23T14:42:03.015025" elapsed="0.378224"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Connexion" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:03.393742" level="INFO">Clicking button 'css=.homey_login_button'.</msg>
+<arg>${BOUTON CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:03.393580" elapsed="0.070355"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:03.393390" elapsed="0.070630"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:56.994340" elapsed="6.469720"/>
+</kw>
+<kw name="Vérifier Que Le Tableau De Bord Est Visible" owner="commun">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:03.464652" elapsed="0.832222"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:04.298905" level="INFO">Page title is 'Tableau de bord - Livraison 3'.</msg>
+<arg>${TITRE TABLEAU DE BORD}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-07-23T14:42:04.297075" elapsed="0.001895"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:03.464362" elapsed="0.834672"/>
+</kw>
+<kw name="Effectuer Une Déconnexion Réussie" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LIEN DECONNEXION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:04.299615" elapsed="0.207373"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:04.507309" level="INFO">Clicking element 'xpath=(//a[contains(text(),'Se déconnecter')])[3]'.</msg>
+<arg>${LIEN DECONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:04.507124" elapsed="1.183041"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${LIEN DECONNEXION}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:05.690307" elapsed="0.011664"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:04.299326" elapsed="1.402741"/>
+</kw>
+<kw name="Vérifier Que Le Lien De Connexion Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LIEN CONNEXION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:05.702572" elapsed="0.006348"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:05.702376" elapsed="0.006634"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:56.993967" elapsed="8.715301"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-07-23T14:42:05.709921" elapsed="4.918543"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:41:47.332203" elapsed="23.296342"/>
+</suite>
+<suite id="s1-s2" name="2 Connexions-Invalides" source="C:\Users\meuni\OneDrive\Formation QA\Projet HOMEY\tests_ihm\2_connexions-invalides.robot">
+<test id="s1-s2-t1" name="Test 1 - ID OK / MDP NOK" line="13">
+<kw name="Ouvrir Le Navigateur Et Accéder A L'Application" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:10.632618" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:42:10.632485" elapsed="5.763445"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:42:16.396135" elapsed="0.286310"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:10.632302" elapsed="6.050269"/>
+</kw>
+<kw name="Un Message D'erreur Devrait Etre Visible Après Une Connexion Echouée">
+<kw name="Accéder A La Page De Connexion" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:16.683369" level="INFO">Clicking element 'xpath=//a[contains(text(),'Se connecter')]'.</msg>
+<arg>${LIEN CONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:16.683210" elapsed="0.078112"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:16.683079" elapsed="0.078338"/>
+</kw>
+<kw name="Saisir Les Identifiants De Connexion" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:16.761782" elapsed="0.212393"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:16.974510" level="INFO">Clicking element 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:16.974315" elapsed="0.062352"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:17.037080" level="INFO">Typing text 'robot' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<arg>${utilisateur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:17.036828" elapsed="0.012781"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:17.049960" level="INFO">Clicking element 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:17.049757" elapsed="0.077706"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:17.127841" level="INFO">Typing text 'azerty' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<arg>${mot_de_passe}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:17.127609" elapsed="0.014456"/>
+</kw>
+<arg>${utilisateur}</arg>
+<arg>${mot_de_passe}</arg>
+<status status="PASS" start="2026-07-23T14:42:16.761557" elapsed="0.380601"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Connexion" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:17.142641" level="INFO">Clicking button 'css=.homey_login_button'.</msg>
+<arg>${BOUTON CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:17.142483" elapsed="0.067599"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:17.142293" elapsed="0.067961"/>
+</kw>
+<kw name="Vérifier Que Le Message D'erreur Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE D'ERREUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:17.210570" elapsed="0.612537"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:17.210389" elapsed="0.612801"/>
+</kw>
+<arg>robot</arg>
+<arg>azerty</arg>
+<status status="PASS" start="2026-07-23T14:42:16.682862" elapsed="1.140363"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:10.631971" elapsed="7.191420"/>
+</test>
+<test id="s1-s2-t2" name="Test 2 - ID NOK / MDP NOK" line="14">
+<kw name="Ouvrir Le Navigateur Et Accéder A L'Application" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:17.824144" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:42:17.824017" elapsed="5.921856"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:42:23.746023" elapsed="0.264691"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:17.823866" elapsed="6.186934"/>
+</kw>
+<kw name="Un Message D'erreur Devrait Etre Visible Après Une Connexion Echouée">
+<kw name="Accéder A La Page De Connexion" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:24.011682" level="INFO">Clicking element 'xpath=//a[contains(text(),'Se connecter')]'.</msg>
+<arg>${LIEN CONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:24.011517" elapsed="0.078607"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:24.011349" elapsed="0.078862"/>
+</kw>
+<kw name="Saisir Les Identifiants De Connexion" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:24.090591" elapsed="0.212675"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:24.303606" level="INFO">Clicking element 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:24.303399" elapsed="0.062450"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:24.366242" level="INFO">Typing text 'azerty' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<arg>${utilisateur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:24.366008" elapsed="0.011196"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:24.377600" level="INFO">Clicking element 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:24.377361" elapsed="0.079113"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:24.456914" level="INFO">Typing text 'azerty' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<arg>${mot_de_passe}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:24.456654" elapsed="0.012592"/>
+</kw>
+<arg>${utilisateur}</arg>
+<arg>${mot_de_passe}</arg>
+<status status="PASS" start="2026-07-23T14:42:24.090351" elapsed="0.378984"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Connexion" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:24.469796" level="INFO">Clicking button 'css=.homey_login_button'.</msg>
+<arg>${BOUTON CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:24.469642" elapsed="0.068530"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:24.469466" elapsed="0.068799"/>
+</kw>
+<kw name="Vérifier Que Le Message D'erreur Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE D'ERREUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:24.538598" elapsed="0.611601"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:24.538398" elapsed="0.611883"/>
+</kw>
+<arg>azerty</arg>
+<arg>azerty</arg>
+<status status="PASS" start="2026-07-23T14:42:24.011083" elapsed="1.139234"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:17.823639" elapsed="7.327006"/>
+</test>
+<test id="s1-s2-t3" name="Test 3 - ID NOK / MDP OK" line="15">
+<kw name="Ouvrir Le Navigateur Et Accéder A L'Application" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:25.151409" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:42:25.151284" elapsed="5.718411"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:42:30.869843" elapsed="0.263658"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:25.151127" elapsed="5.982461"/>
+</kw>
+<kw name="Un Message D'erreur Devrait Etre Visible Après Une Connexion Echouée">
+<kw name="Accéder A La Page De Connexion" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:31.134428" level="INFO">Clicking element 'xpath=//a[contains(text(),'Se connecter')]'.</msg>
+<arg>${LIEN CONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:31.134275" elapsed="0.076801"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:31.134145" elapsed="0.077018"/>
+</kw>
+<kw name="Saisir Les Identifiants De Connexion" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:31.211541" elapsed="0.213828"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:31.425786" level="INFO">Clicking element 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:31.425525" elapsed="0.062444"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:31.488333" level="INFO">Typing text 'azerty' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<arg>${utilisateur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:31.488111" elapsed="0.012764"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:31.501228" level="INFO">Clicking element 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:31.501020" elapsed="0.080051"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:31.581443" level="INFO">Typing text 'robot' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<arg>${mot_de_passe}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:31.581211" elapsed="0.012318"/>
+</kw>
+<arg>${utilisateur}</arg>
+<arg>${mot_de_passe}</arg>
+<status status="PASS" start="2026-07-23T14:42:31.211311" elapsed="0.382330"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Connexion" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:31.594253" level="INFO">Clicking button 'css=.homey_login_button'.</msg>
+<arg>${BOUTON CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:31.594016" elapsed="0.067089"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:31.593793" elapsed="0.067401"/>
+</kw>
+<kw name="Vérifier Que Le Message D'erreur Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE D'ERREUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:31.661621" elapsed="0.613360"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:31.661402" elapsed="0.613666"/>
+</kw>
+<arg>azerty</arg>
+<arg>robot</arg>
+<status status="PASS" start="2026-07-23T14:42:31.133814" elapsed="1.141294"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:25.150897" elapsed="7.124400"/>
+</test>
+<test id="s1-s2-t4" name="Test 4 - ID vide / MDP NOK" line="16">
+<kw name="Ouvrir Le Navigateur Et Accéder A L'Application" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:32.276065" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:42:32.275937" elapsed="5.757137"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:42:38.033282" elapsed="0.267388"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:32.275780" elapsed="6.025051"/>
+</kw>
+<kw name="Un Message D'erreur Devrait Etre Visible Après Une Connexion Echouée">
+<kw name="Accéder A La Page De Connexion" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:38.302169" level="INFO">Clicking element 'xpath=//a[contains(text(),'Se connecter')]'.</msg>
+<arg>${LIEN CONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:38.302010" elapsed="0.077816"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:38.301840" elapsed="0.078074"/>
+</kw>
+<kw name="Saisir Les Identifiants De Connexion" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:38.380331" elapsed="0.212457"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:38.593115" level="INFO">Clicking element 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:38.592922" elapsed="0.065214"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:38.658512" level="INFO">Typing text '' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<arg>${utilisateur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:38.658277" elapsed="0.006732"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:38.665339" level="INFO">Clicking element 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:38.665146" elapsed="0.081421"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:38.746929" level="INFO">Typing text 'azerty' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<arg>${mot_de_passe}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:38.746707" elapsed="0.014482"/>
+</kw>
+<arg>${utilisateur}</arg>
+<arg>${mot_de_passe}</arg>
+<status status="PASS" start="2026-07-23T14:42:38.380078" elapsed="0.381200"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Connexion" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:38.761757" level="INFO">Clicking button 'css=.homey_login_button'.</msg>
+<arg>${BOUTON CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:38.761589" elapsed="0.071624"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:38.761411" elapsed="0.071889"/>
+</kw>
+<kw name="Vérifier Que Le Message D'erreur Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE D'ERREUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:38.833604" elapsed="0.611645"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:38.833425" elapsed="0.611903"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>azerty</arg>
+<status status="PASS" start="2026-07-23T14:42:38.301168" elapsed="1.144195"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:32.275551" elapsed="7.170024"/>
+</test>
+<test id="s1-s2-t5" name="Test 5 - ID vide / MDP OK" line="17">
+<kw name="Ouvrir Le Navigateur Et Accéder A L'Application" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:39.446562" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:42:39.446429" elapsed="6.384814"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:42:45.831396" elapsed="0.269651"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:39.446243" elapsed="6.654894"/>
+</kw>
+<kw name="Un Message D'erreur Devrait Etre Visible Après Une Connexion Echouée">
+<kw name="Accéder A La Page De Connexion" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:46.102240" level="INFO">Clicking element 'xpath=//a[contains(text(),'Se connecter')]'.</msg>
+<arg>${LIEN CONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:46.102086" elapsed="0.080212"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:46.101959" elapsed="0.080426"/>
+</kw>
+<kw name="Saisir Les Identifiants De Connexion" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:46.182765" elapsed="0.213999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:46.397114" level="INFO">Clicking element 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:46.396907" elapsed="0.062707"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:46.459978" level="INFO">Typing text '' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<arg>${utilisateur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:46.459755" elapsed="0.005973"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:46.466108" level="INFO">Clicking element 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:46.465913" elapsed="0.078161"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:46.544443" level="INFO">Typing text 'robot' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<arg>${mot_de_passe}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:46.544220" elapsed="0.016982"/>
+</kw>
+<arg>${utilisateur}</arg>
+<arg>${mot_de_passe}</arg>
+<status status="PASS" start="2026-07-23T14:42:46.182537" elapsed="0.378801"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Connexion" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:46.561841" level="INFO">Clicking button 'css=.homey_login_button'.</msg>
+<arg>${BOUTON CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:46.561673" elapsed="0.070061"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:46.561490" elapsed="0.070331"/>
+</kw>
+<kw name="Vérifier Que Le Message D'erreur Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE D'ERREUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:46.632147" elapsed="0.611332"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:46.631960" elapsed="0.611609"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>robot</arg>
+<status status="PASS" start="2026-07-23T14:42:46.101477" elapsed="1.142130"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:39.445958" elapsed="7.797806"/>
+</test>
+<test id="s1-s2-t6" name="Test 6 - ID OK / MDP vide" line="18">
+<kw name="Ouvrir Le Navigateur Et Accéder A L'Application" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:47.244599" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:42:47.244466" elapsed="5.956178"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:42:53.200826" elapsed="0.267192"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:47.244301" elapsed="6.223806"/>
+</kw>
+<kw name="Un Message D'erreur Devrait Etre Visible Après Une Connexion Echouée">
+<kw name="Accéder A La Page De Connexion" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:53.469339" level="INFO">Clicking element 'xpath=//a[contains(text(),'Se connecter')]'.</msg>
+<arg>${LIEN CONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:53.469187" elapsed="0.076537"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:53.469032" elapsed="0.076785"/>
+</kw>
+<kw name="Saisir Les Identifiants De Connexion" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:53.546189" elapsed="0.217706"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:53.764236" level="INFO">Clicking element 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:53.764041" elapsed="0.063542"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:53.828068" level="INFO">Typing text 'robot' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<arg>${utilisateur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:53.827760" elapsed="0.012874"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:53.840995" level="INFO">Clicking element 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:53.840786" elapsed="0.080440"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:53.921582" level="INFO">Typing text '' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<arg>${mot_de_passe}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:53.921366" elapsed="0.011033"/>
+</kw>
+<arg>${utilisateur}</arg>
+<arg>${mot_de_passe}</arg>
+<status status="PASS" start="2026-07-23T14:42:53.545965" elapsed="0.386518"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Connexion" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:53.932943" level="INFO">Clicking button 'css=.homey_login_button'.</msg>
+<arg>${BOUTON CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:42:53.932790" elapsed="0.068802"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:53.932607" elapsed="0.069125"/>
+</kw>
+<kw name="Vérifier Que Le Message D'erreur Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE D'ERREUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:42:54.002218" elapsed="0.614046"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:54.001933" elapsed="0.614415"/>
+</kw>
+<arg>robot</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2026-07-23T14:42:53.468392" elapsed="1.147994"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:47.244055" elapsed="7.372493"/>
+</test>
+<test id="s1-s2-t7" name="Test 7 - ID NOK / MDP vide" line="19">
+<kw name="Ouvrir Le Navigateur Et Accéder A L'Application" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:42:54.617540" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:42:54.617407" elapsed="5.886543"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:43:00.504141" elapsed="0.274896"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:54.617225" elapsed="6.161928"/>
+</kw>
+<kw name="Un Message D'erreur Devrait Etre Visible Après Une Connexion Echouée">
+<kw name="Accéder A La Page De Connexion" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:00.780419" level="INFO">Clicking element 'xpath=//a[contains(text(),'Se connecter')]'.</msg>
+<arg>${LIEN CONNEXION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:00.780256" elapsed="0.075855"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:00.780116" elapsed="0.076091"/>
+</kw>
+<kw name="Saisir Les Identifiants De Connexion" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:00.856581" elapsed="0.213927"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:01.070894" level="INFO">Clicking element 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:01.070688" elapsed="0.063058"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:01.134105" level="INFO">Typing text 'azerty' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>${CHAMP NOM UTILISATEUR}</arg>
+<arg>${utilisateur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:01.133889" elapsed="0.012149"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:01.146400" level="INFO">Clicking element 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:01.146188" elapsed="0.082247"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:01.228826" level="INFO">Typing text '' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${CHAMP MOT DE PASSE}</arg>
+<arg>${mot_de_passe}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:01.228580" elapsed="0.011568"/>
+</kw>
+<arg>${utilisateur}</arg>
+<arg>${mot_de_passe}</arg>
+<status status="PASS" start="2026-07-23T14:43:00.856356" elapsed="0.383889"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Connexion" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:01.240721" level="INFO">Clicking button 'css=.homey_login_button'.</msg>
+<arg>${BOUTON CONNEXION}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:01.240562" elapsed="0.069595"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:01.240387" elapsed="0.069860"/>
+</kw>
+<kw name="Vérifier Que Le Message D'erreur Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE D'ERREUR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:01.310554" elapsed="0.408929"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:01.310379" elapsed="0.409195"/>
+</kw>
+<arg>azerty</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2026-07-23T14:43:00.779451" elapsed="0.940163"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:54.616940" elapsed="7.102878"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-07-23T14:43:01.720247" elapsed="17.000768"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:42:10.629620" elapsed="68.091480"/>
+</suite>
+<suite id="s1-s3" name="3 Contacter-Hote" source="C:\Users\meuni\OneDrive\Formation QA\Projet HOMEY\tests_ihm\3_contacter-hote.robot">
+<test id="s1-s3-t1" name="La Modale De Contact Doit S'afficher Après Un Clic Sur Le Bouton Contactez L'hôte" line="11">
+<kw name="Ouvrir Le Navigateur Et Accéder A La Page De L Annonce" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:18.724678" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/index.php/listing/large-and-modern-bedroom/'.</msg>
+<arg>${URL FICHE ANNONCE}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:43:18.724547" elapsed="6.198263"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:43:24.922969" elapsed="0.280525"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:18.724389" elapsed="6.479198"/>
+</kw>
+<kw name="Cliquer Sur Le Bouton Contactez L'hôte" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:25.204045" elapsed="0.015041"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:25.219501" level="INFO">Clicking element 'css=button[data-target='#modal-contact-host']'.</msg>
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:25.219259" elapsed="0.082332"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:25.203859" elapsed="0.097823"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:25.302144" elapsed="0.211245"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:25.519395" level="INFO">Element 'css=#modal-contact-host .modal-title' contains text 'Contactez l'hôte'.</msg>
+<arg>${TITRE MODALE CONTACT HOTE}</arg>
+<arg>Contactez l'hôte</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:43:25.513516" elapsed="0.005959"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:25.301941" elapsed="0.217607"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:18.724050" elapsed="6.795675"/>
+</test>
+<test id="s1-s3-t2" name="La Modale De Contact Doit S'afficher Après Un Clic Sur Le Lien Contacter L'hôte" line="16">
+<kw name="Ouvrir Le Navigateur Et Accéder A La Page De L Annonce" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:25.520773" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/index.php/listing/large-and-modern-bedroom/'.</msg>
+<arg>${URL FICHE ANNONCE}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:43:25.520640" elapsed="6.079290"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:43:31.600120" elapsed="0.275880"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:25.520462" elapsed="6.355628"/>
+</kw>
+<kw name="Cliquer Sur Le Lien Contacter L'hôte" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LIEN CONTACTER HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:31.876559" elapsed="0.012219"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:31.889136" level="INFO">Clicking element 'css=a[data-target='#modal-contact-host']'.</msg>
+<arg>${LIEN CONTACTER HOTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:31.888923" elapsed="0.080280"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:31.876367" elapsed="0.092936"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:31.969902" elapsed="0.210486"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:32.187889" level="INFO">Element 'css=#modal-contact-host .modal-title' contains text 'Contactez l'hôte'.</msg>
+<arg>${TITRE MODALE CONTACT HOTE}</arg>
+<arg>Contactez l'hôte</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:43:32.180524" elapsed="0.007444"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:31.969605" elapsed="0.218462"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:25.520108" elapsed="6.668152"/>
+</test>
+<test id="s1-s3-t3" name="Tous Les Champs Et Le Bouton Soumettre Doivent Être Visibles Dans La Modale De Contact" line="21">
+<kw name="Ouvrir Le Navigateur Et Accéder A La Page De L Annonce" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:32.189182" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/index.php/listing/large-and-modern-bedroom/'.</msg>
+<arg>${URL FICHE ANNONCE}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:43:32.189050" elapsed="5.975260"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.164467" elapsed="0.267699"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:32.188884" elapsed="6.243372"/>
+</kw>
+<kw name="Cliquer Sur Le Bouton Contactez L'hôte" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.432683" elapsed="0.012507"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:38.445535" level="INFO">Clicking element 'css=button[data-target='#modal-contact-host']'.</msg>
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.445332" elapsed="0.072657"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:38.432501" elapsed="0.085576"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.518544" elapsed="0.210913"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:38.735593" level="INFO">Element 'css=#modal-contact-host .modal-title' contains text 'Contactez l'hôte'.</msg>
+<arg>${TITRE MODALE CONTACT HOTE}</arg>
+<arg>Contactez l'hôte</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.729591" elapsed="0.006081"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:38.518333" elapsed="0.217414"/>
+</kw>
+<kw name="Vérifier Que Le Formulaire De Contact Hôte Est Complet" owner="commun">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:38.741333" level="INFO">Element 'css=#modal-contact-host input[name='name']' is displayed.</msg>
+<arg>${CHAMP NOM CONTACT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.736220" elapsed="0.005188"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:38.746266" level="INFO">Element 'css=#modal-contact-host input[name='email']' is displayed.</msg>
+<arg>${CHAMP EMAIL CONTACT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.741531" elapsed="0.004810"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:38.751360" level="INFO">Element 'css=#modal-contact-host input[name='phone']' is displayed.</msg>
+<arg>${CHAMP TELEPHONE CONTACT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.746465" elapsed="0.004972"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:38.756610" level="INFO">Element 'css=#modal-contact-host textarea[name='message']' is displayed.</msg>
+<arg>${CHAMP MESSAGE CONTACT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.751555" elapsed="0.005131"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:38.762065" level="INFO">Element 'css=#modal-contact-host .contact_listing_host' is displayed.</msg>
+<arg>${BOUTON SOUMETTRE CONTACT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.756809" elapsed="0.005336"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:38.736006" elapsed="0.026211"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:32.188591" elapsed="6.573827"/>
+</test>
+<test id="s1-s3-t4" name="Le Formulaire De Contact Doit Pouvoir Être Soumis Avec Des Informations Valides" line="27">
+<kw name="Ouvrir Le Navigateur Et Accéder A La Page De L Annonce" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:38.763502" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/index.php/listing/large-and-modern-bedroom/'.</msg>
+<arg>${URL FICHE ANNONCE}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:43:38.763370" elapsed="6.492779"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:43:45.256297" elapsed="0.276218"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:38.763197" elapsed="6.769409"/>
+</kw>
+<kw name="Cliquer Sur Le Bouton Contactez L'hôte" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:45.533137" elapsed="0.012789"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:45.546264" level="INFO">Clicking element 'css=button[data-target='#modal-contact-host']'.</msg>
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:45.546067" elapsed="0.077399"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:45.532927" elapsed="0.090629"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:45.623951" elapsed="0.210384"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:45.840177" level="INFO">Element 'css=#modal-contact-host .modal-title' contains text 'Contactez l'hôte'.</msg>
+<arg>${TITRE MODALE CONTACT HOTE}</arg>
+<arg>Contactez l'hôte</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:43:45.834474" elapsed="0.005796"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:45.623769" elapsed="0.216582"/>
+</kw>
+<kw name="Remplir Le Formulaire De Contact Hôte" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:45.840954" level="INFO">Clicking element 'css=#modal-contact-host input[name='name']'.</msg>
+<arg>${CHAMP NOM CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:45.840807" elapsed="0.064923"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:45.906088" level="INFO">Typing text 'Jean Dupont' into text field 'css=#modal-contact-host input[name='name']'.</msg>
+<arg>${CHAMP NOM CONTACT}</arg>
+<arg>${nom}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:45.905873" elapsed="0.012993"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:45.919217" level="INFO">Clicking element 'css=#modal-contact-host input[name='email']'.</msg>
+<arg>${CHAMP EMAIL CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:45.919014" elapsed="0.061374"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:45.980763" level="INFO">Typing text 'jean.dupont@email.fr' into text field 'css=#modal-contact-host input[name='email']'.</msg>
+<arg>${CHAMP EMAIL CONTACT}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:45.980532" elapsed="0.013069"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:45.993951" level="INFO">Clicking element 'css=#modal-contact-host input[name='phone']'.</msg>
+<arg>${CHAMP TELEPHONE CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:45.993747" elapsed="0.059523"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:46.053621" level="INFO">Typing text '0601020304' into text field 'css=#modal-contact-host input[name='phone']'.</msg>
+<arg>${CHAMP TELEPHONE CONTACT}</arg>
+<arg>${telephone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:46.053414" elapsed="0.013802"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:46.067552" level="INFO">Clicking element 'css=#modal-contact-host textarea[name='message']'.</msg>
+<arg>${CHAMP MESSAGE CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:46.067357" elapsed="0.059160"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:46.126887" level="INFO">Typing text 'Bonjour, cette annonce est-elle toujours disponible aux dates du 15 au 20 juillet ?' into text field 'css=#modal-contact-host textarea[name='message']'.</msg>
+<arg>${CHAMP MESSAGE CONTACT}</arg>
+<arg>${message}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:46.126662" elapsed="0.023154"/>
+</kw>
+<arg>Jean Dupont</arg>
+<arg>jean.dupont@email.fr</arg>
+<arg>0601020304</arg>
+<arg>Bonjour, cette annonce est-elle toujours disponible aux dates du 15 au 20 juillet ?</arg>
+<status status="PASS" start="2026-07-23T14:43:45.840581" elapsed="0.309325"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Contact Hôte" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:46.150466" level="INFO">Clicking button 'css=#modal-contact-host .contact_listing_host'.</msg>
+<arg>${BOUTON SOUMETTRE CONTACT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:46.150315" elapsed="0.062508"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:46.150142" elapsed="0.062768"/>
+</kw>
+<kw name="Vérifier Qu'un Message Est Affiché Après L'envoi Du Formulaire De Contact" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ZONE MESSAGES CONTACT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:46.213376" elapsed="0.632268"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:46.213161" elapsed="0.632566"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:38.762892" elapsed="8.082998"/>
+</test>
+<test id="s1-s3-t5" name="La Modale De Contact Doit Se Fermer Après Un Clic Sur Le Bouton De Fermeture" line="35">
+<kw name="Ouvrir Le Navigateur Et Accéder A La Page De L Annonce" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:46.846893" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/index.php/listing/large-and-modern-bedroom/'.</msg>
+<arg>${URL FICHE ANNONCE}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:43:46.846735" elapsed="6.104737"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:43:52.951622" elapsed="0.270102"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:46.846544" elapsed="6.375277"/>
+</kw>
+<kw name="Cliquer Sur Le Bouton Contactez L'hôte" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:53.223102" elapsed="0.013307"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:53.236759" level="INFO">Clicking element 'css=button[data-target='#modal-contact-host']'.</msg>
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:53.236553" elapsed="0.074318"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:53.222376" elapsed="0.088583"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:53.311411" elapsed="0.211836"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:53.529215" level="INFO">Element 'css=#modal-contact-host .modal-title' contains text 'Contactez l'hôte'.</msg>
+<arg>${TITRE MODALE CONTACT HOTE}</arg>
+<arg>Contactez l'hôte</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:43:53.523387" elapsed="0.005905"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:53.311221" elapsed="0.218143"/>
+</kw>
+<kw name="Fermer La Modale De Contact Hôte" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOUTON FERMETURE MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:53.529979" elapsed="0.005509"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:53.535800" level="INFO">Clicking element 'css=#modal-contact-host .close'.</msg>
+<arg>${BOUTON FERMETURE MODALE CONTACT HOTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:43:53.535613" elapsed="0.057578"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:53.529775" elapsed="0.063504"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte N'est Plus Visible" owner="commun">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:53.593685" elapsed="0.003955"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:53.593486" elapsed="0.004230"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:46.846216" elapsed="6.751654"/>
+</test>
+<test id="s1-s3-t6" name="La Modale De Contact Hôte Ne Doit Pas Être Visible Avant Toute Interaction" line="42">
+<kw name="Ouvrir Le Navigateur Et Accéder A La Page De L Annonce" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:53.599030" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/index.php/listing/large-and-modern-bedroom/'.</msg>
+<arg>${URL FICHE ANNONCE}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:43:53.598893" elapsed="5.999448"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:43:59.598489" elapsed="0.273618"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:53.598713" elapsed="6.273481"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte N'est Plus Visible" owner="commun">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-07-23T14:43:59.872662" elapsed="0.011169"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:59.872465" elapsed="0.011452"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:53.598406" elapsed="6.285706"/>
+</test>
+<test id="s1-s3-t7" name="Les Placeholders Des Champs Du Formulaire De Contact Doivent Être Corrects" line="46">
+<kw name="Ouvrir Le Navigateur Et Accéder A La Page De L Annonce" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:43:59.885123" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/index.php/listing/large-and-modern-bedroom/'.</msg>
+<arg>${URL FICHE ANNONCE}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:43:59.884982" elapsed="6.306437"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:44:06.191573" elapsed="0.275445"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:59.884791" elapsed="6.582316"/>
+</kw>
+<kw name="Cliquer Sur Le Bouton Contactez L'hôte" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:44:06.467597" elapsed="0.013619"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:06.481585" level="INFO">Clicking element 'css=button[data-target='#modal-contact-host']'.</msg>
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:06.481366" elapsed="0.076195"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:06.467391" elapsed="0.090258"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:44:06.558054" elapsed="0.210778"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:06.774815" level="INFO">Element 'css=#modal-contact-host .modal-title' contains text 'Contactez l'hôte'.</msg>
+<arg>${TITRE MODALE CONTACT HOTE}</arg>
+<arg>Contactez l'hôte</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:44:06.768968" elapsed="0.005928"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:06.557881" elapsed="0.217088"/>
+</kw>
+<kw name="Vérifier Que Les Placeholders Du Formulaire De Contact Hôte Sont Corrects" owner="commun">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:06.779730" level="INFO">Element 'css=#modal-contact-host input[name='name']' attribute 'placeholder' contains value 'Nom'.</msg>
+<arg>${CHAMP NOM CONTACT}</arg>
+<arg>placeholder</arg>
+<arg>Nom</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2026-07-23T14:44:06.775540" elapsed="0.004266"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:06.782959" level="INFO">Element 'css=#modal-contact-host input[name='email']' attribute 'placeholder' contains value 'Email'.</msg>
+<arg>${CHAMP EMAIL CONTACT}</arg>
+<arg>placeholder</arg>
+<arg>Email</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2026-07-23T14:44:06.779928" elapsed="0.003096"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:06.786720" level="INFO">Element 'css=#modal-contact-host input[name='phone']' attribute 'placeholder' contains value 'Téléphone'.</msg>
+<arg>${CHAMP TELEPHONE CONTACT}</arg>
+<arg>placeholder</arg>
+<arg>Téléphone</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2026-07-23T14:44:06.783127" elapsed="0.003666"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:06.791206" level="INFO">Element 'css=#modal-contact-host textarea[name='message']' attribute 'placeholder' contains value 'Message'.</msg>
+<arg>${CHAMP MESSAGE CONTACT}</arg>
+<arg>placeholder</arg>
+<arg>Message</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2026-07-23T14:44:06.786911" elapsed="0.004375"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:06.775278" elapsed="0.016080"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:59.884481" elapsed="6.907084"/>
+</test>
+<test id="s1-s3-t8" name="Les Informations Saisies Doivent Être Conservées Dans Les Champs Du Formulaire De Contact" line="52">
+<kw name="Ouvrir Le Navigateur Et Accéder A La Page De L Annonce" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:06.792796" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/index.php/listing/large-and-modern-bedroom/'.</msg>
+<arg>${URL FICHE ANNONCE}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:44:06.792639" elapsed="6.021489"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:44:12.814329" elapsed="0.280903"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:06.792406" elapsed="6.302911"/>
+</kw>
+<kw name="Cliquer Sur Le Bouton Contactez L'hôte" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.095785" elapsed="0.012153"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.108276" level="INFO">Clicking element 'css=button[data-target='#modal-contact-host']'.</msg>
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.108078" elapsed="0.074444"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:13.095593" elapsed="0.087015"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.183353" elapsed="0.210449"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.401237" level="INFO">Element 'css=#modal-contact-host .modal-title' contains text 'Contactez l'hôte'.</msg>
+<arg>${TITRE MODALE CONTACT HOTE}</arg>
+<arg>Contactez l'hôte</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.393935" elapsed="0.007386"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:13.183076" elapsed="0.218345"/>
+</kw>
+<kw name="Remplir Le Formulaire De Contact Hôte" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.403439" level="INFO">Clicking element 'css=#modal-contact-host input[name='name']'.</msg>
+<arg>${CHAMP NOM CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.401929" elapsed="0.062476"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.464768" level="INFO">Typing text 'Marie Martin' into text field 'css=#modal-contact-host input[name='name']'.</msg>
+<arg>${CHAMP NOM CONTACT}</arg>
+<arg>${nom}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.464548" elapsed="0.012952"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.477851" level="INFO">Clicking element 'css=#modal-contact-host input[name='email']'.</msg>
+<arg>${CHAMP EMAIL CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.477640" elapsed="0.060602"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.538601" level="INFO">Typing text 'marie.martin@email.fr' into text field 'css=#modal-contact-host input[name='email']'.</msg>
+<arg>${CHAMP EMAIL CONTACT}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.538384" elapsed="0.011889"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.550635" level="INFO">Clicking element 'css=#modal-contact-host input[name='phone']'.</msg>
+<arg>${CHAMP TELEPHONE CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.550424" elapsed="0.059686"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.610480" level="INFO">Typing text '0712345678' into text field 'css=#modal-contact-host input[name='phone']'.</msg>
+<arg>${CHAMP TELEPHONE CONTACT}</arg>
+<arg>${telephone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.610252" elapsed="0.013565"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.624171" level="INFO">Clicking element 'css=#modal-contact-host textarea[name='message']'.</msg>
+<arg>${CHAMP MESSAGE CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.623962" elapsed="0.061590"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.685927" level="INFO">Typing text 'Est-ce que les animaux sont acceptés ?' into text field 'css=#modal-contact-host textarea[name='message']'.</msg>
+<arg>${CHAMP MESSAGE CONTACT}</arg>
+<arg>${message}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.685698" elapsed="0.014112"/>
+</kw>
+<arg>Marie Martin</arg>
+<arg>marie.martin@email.fr</arg>
+<arg>0712345678</arg>
+<arg>Est-ce que les animaux sont acceptés ?</arg>
+<status status="PASS" start="2026-07-23T14:44:13.401691" elapsed="0.298212"/>
+</kw>
+<kw name="Vérifier Que Les Champs Du Formulaire De Contact Hôte Contiennent Les Valeurs Saisies" owner="commun">
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.707940" level="INFO">Content of text field 'css=#modal-contact-host input[name='name']' is 'Marie Martin'.</msg>
+<arg>${CHAMP NOM CONTACT}</arg>
+<arg>${nom}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.700603" elapsed="0.007419"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.716009" level="INFO">Content of text field 'css=#modal-contact-host input[name='email']' is 'marie.martin@email.fr'.</msg>
+<arg>${CHAMP EMAIL CONTACT}</arg>
+<arg>${email}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.708145" elapsed="0.007941"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.724675" level="INFO">Content of text field 'css=#modal-contact-host input[name='phone']' is '0712345678'.</msg>
+<arg>${CHAMP TELEPHONE CONTACT}</arg>
+<arg>${telephone}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.716206" elapsed="0.008548"/>
+</kw>
+<kw name="Textarea Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.730393" level="INFO">Content of text area 'css=#modal-contact-host textarea[name='message']' is 'Est-ce que les animaux sont acceptés ?'.</msg>
+<arg>${CHAMP MESSAGE CONTACT}</arg>
+<arg>${message}</arg>
+<doc>Verifies text area ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.724874" elapsed="0.005600"/>
+</kw>
+<arg>Marie Martin</arg>
+<arg>marie.martin@email.fr</arg>
+<arg>0712345678</arg>
+<arg>Est-ce que les animaux sont acceptés ?</arg>
+<status status="PASS" start="2026-07-23T14:44:13.700299" elapsed="0.030247"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:06.792088" elapsed="6.938799"/>
+</test>
+<test id="s1-s3-t9" name="Le Formulaire De Contact Doit Pouvoir Être Soumis Avec Des Informations Valides Depuis Le Lien Contacter L'hôte" line="59">
+<kw name="Ouvrir Le Navigateur Et Accéder A La Page De L Annonce" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:13.732119" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/index.php/listing/large-and-modern-bedroom/'.</msg>
+<arg>${URL FICHE ANNONCE}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:44:13.731975" elapsed="6.466246"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.198370" elapsed="0.263967"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:13.731766" elapsed="6.730655"/>
+</kw>
+<kw name="Cliquer Sur Le Lien Contacter L'hôte" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LIEN CONTACTER HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.462883" elapsed="0.012386"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:20.475583" level="INFO">Clicking element 'css=a[data-target='#modal-contact-host']'.</msg>
+<arg>${LIEN CONTACTER HOTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.475401" elapsed="0.076191"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:20.462694" elapsed="0.089015"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.552193" elapsed="0.212846"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:20.770953" level="INFO">Element 'css=#modal-contact-host .modal-title' contains text 'Contactez l'hôte'.</msg>
+<arg>${TITRE MODALE CONTACT HOTE}</arg>
+<arg>Contactez l'hôte</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.765179" elapsed="0.005849"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:20.551993" elapsed="0.219103"/>
+</kw>
+<kw name="Remplir Le Formulaire De Contact Hôte" owner="commun">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:20.771887" level="INFO">Clicking element 'css=#modal-contact-host input[name='name']'.</msg>
+<arg>${CHAMP NOM CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.771735" elapsed="0.062142"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:20.834268" level="INFO">Typing text 'Paul Bernard' into text field 'css=#modal-contact-host input[name='name']'.</msg>
+<arg>${CHAMP NOM CONTACT}</arg>
+<arg>${nom}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.834027" elapsed="0.013669"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:20.848048" level="INFO">Clicking element 'css=#modal-contact-host input[name='email']'.</msg>
+<arg>${CHAMP EMAIL CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.847839" elapsed="0.061289"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:20.909500" level="INFO">Typing text 'paul.bernard@email.fr' into text field 'css=#modal-contact-host input[name='email']'.</msg>
+<arg>${CHAMP EMAIL CONTACT}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.909270" elapsed="0.013107"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:20.922719" level="INFO">Clicking element 'css=#modal-contact-host input[name='phone']'.</msg>
+<arg>${CHAMP TELEPHONE CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.922519" elapsed="0.060495"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:20.983376" level="INFO">Typing text '0623456789' into text field 'css=#modal-contact-host input[name='phone']'.</msg>
+<arg>${CHAMP TELEPHONE CONTACT}</arg>
+<arg>${telephone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.983154" elapsed="0.013704"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:20.997208" level="INFO">Clicking element 'css=#modal-contact-host textarea[name='message']'.</msg>
+<arg>${CHAMP MESSAGE CONTACT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:20.997006" elapsed="0.059187"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:21.056583" level="INFO">Typing text 'Bonjour, quelle est l'heure d'arrivée possible le jour de la réservation ?' into text field 'css=#modal-contact-host textarea[name='message']'.</msg>
+<arg>${CHAMP MESSAGE CONTACT}</arg>
+<arg>${message}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:21.056341" elapsed="0.020285"/>
+</kw>
+<arg>Paul Bernard</arg>
+<arg>paul.bernard@email.fr</arg>
+<arg>0623456789</arg>
+<arg>Bonjour, quelle est l'heure d'arrivée possible le jour de la réservation ?</arg>
+<status status="PASS" start="2026-07-23T14:44:20.771495" elapsed="0.305221"/>
+</kw>
+<kw name="Soumettre Le Formulaire De Contact Hôte" owner="commun">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:21.077286" level="INFO">Clicking button 'css=#modal-contact-host .contact_listing_host'.</msg>
+<arg>${BOUTON SOUMETTRE CONTACT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:21.077111" elapsed="0.066928"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:21.076933" elapsed="0.067198"/>
+</kw>
+<kw name="Vérifier Qu'un Message Est Affiché Après L'envoi Du Formulaire De Contact" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ZONE MESSAGES CONTACT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:44:21.144589" elapsed="0.826643"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:21.144383" elapsed="0.826934"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:13.731307" elapsed="8.240206"/>
+</test>
+<test id="s1-s3-t10" name="Le Champ Email Doit Être De Type Email Et Le Champ Message Doit Comporter 5 Lignes" line="67">
+<kw name="Ouvrir Le Navigateur Et Accéder A La Page De L Annonce" owner="commun" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:21.972743" level="INFO">Opening browser 'Firefox' to base url 'http://livraison3.testacademy.fr/index.php/listing/large-and-modern-bedroom/'.</msg>
+<arg>${URL FICHE ANNONCE}</arg>
+<arg>${NAVIGATEUR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-07-23T14:44:21.972443" elapsed="6.747694"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-07-23T14:44:28.720289" elapsed="0.271345"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:21.972208" elapsed="7.019517"/>
+</kw>
+<kw name="Cliquer Sur Le Bouton Contactez L'hôte" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:44:28.992315" elapsed="0.014546"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:29.007209" level="INFO">Clicking element 'css=button[data-target='#modal-contact-host']'.</msg>
+<arg>${BOUTON CONTACTER HOTE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-07-23T14:44:29.007003" elapsed="0.075350"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:28.992074" elapsed="0.090384"/>
+</kw>
+<kw name="Vérifier Que La Modale De Contact Hôte Est Visible" owner="commun">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MODALE CONTACT HOTE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-07-23T14:44:29.082998" elapsed="0.211813"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:29.304087" level="INFO">Element 'css=#modal-contact-host .modal-title' contains text 'Contactez l'hôte'.</msg>
+<arg>${TITRE MODALE CONTACT HOTE}</arg>
+<arg>Contactez l'hôte</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-07-23T14:44:29.294946" elapsed="0.009245"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:29.082724" elapsed="0.221546"/>
+</kw>
+<kw name="Vérifier Que Les Types Des Champs Du Formulaire De Contact Hôte Sont Corrects" owner="commun">
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:29.308791" level="INFO">Element 'css=#modal-contact-host input[name='name']' attribute 'type' contains value 'text'.</msg>
+<arg>${CHAMP NOM CONTACT}</arg>
+<arg>type</arg>
+<arg>text</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2026-07-23T14:44:29.304748" elapsed="0.004120"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:29.311912" level="INFO">Element 'css=#modal-contact-host input[name='email']' attribute 'type' contains value 'email'.</msg>
+<arg>${CHAMP EMAIL CONTACT}</arg>
+<arg>type</arg>
+<arg>email</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2026-07-23T14:44:29.308986" elapsed="0.002987"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:29.315676" level="INFO">Element 'css=#modal-contact-host input[name='phone']' attribute 'type' contains value 'text'.</msg>
+<arg>${CHAMP TELEPHONE CONTACT}</arg>
+<arg>type</arg>
+<arg>text</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2026-07-23T14:44:29.312086" elapsed="0.003663"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-07-23T14:44:29.319938" level="INFO">Element 'css=#modal-contact-host textarea[name='message']' attribute 'rows' contains value '5'.</msg>
+<arg>${CHAMP MESSAGE CONTACT}</arg>
+<arg>rows</arg>
+<arg>5</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2026-07-23T14:44:29.315861" elapsed="0.004155"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:29.304537" elapsed="0.015549"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:44:21.971894" elapsed="7.348384"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-07-23T14:44:29.320728" elapsed="24.467795"/>
+</kw>
+<status status="PASS" start="2026-07-23T14:43:18.722054" elapsed="95.066551"/>
+</suite>
+<status status="PASS" start="2026-07-23T14:41:47.308828" elapsed="186.480455"/>
+</suite>
+<statistics>
+<total>
+<stat pass="19" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests Ihm" id="s1" pass="19" fail="0" skip="0">Tests Ihm</stat>
+<stat name="1 Connexions-Valides" id="s1-s1" pass="2" fail="0" skip="0">Tests Ihm.1 Connexions-Valides</stat>
+<stat name="2 Connexions-Invalides" id="s1-s2" pass="7" fail="0" skip="0">Tests Ihm.2 Connexions-Invalides</stat>
+<stat name="3 Contacter-Hote" id="s1-s3" pass="10" fail="0" skip="0">Tests Ihm.3 Contacter-Hote</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
